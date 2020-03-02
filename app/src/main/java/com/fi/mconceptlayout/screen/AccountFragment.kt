@@ -18,7 +18,7 @@ class AccountFragment : BaseFragment(){
     override fun getToolbarColor(): Int? = null
 
     override fun mainCode() {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
 }
