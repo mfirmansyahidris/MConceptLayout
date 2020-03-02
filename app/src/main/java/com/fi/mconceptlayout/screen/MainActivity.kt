@@ -29,6 +29,9 @@ class MainActivity : BaseActivity() {
             true
         }
         bn_main.selectedItemId = R.id.navmenu_home
+        val badge = bn_main.getOrCreateBadge(R.id.navmenu_notification)
+        badge.isVisible = true
+        badge.number = 30
     }
 
     private fun openFragment(fragment: Fragment) {

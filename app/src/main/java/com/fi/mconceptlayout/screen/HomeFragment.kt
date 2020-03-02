@@ -1,5 +1,6 @@
 package com.fi.mconceptlayout.screen
 
+import android.graphics.Color
 import com.fi.mconceptlayout.R
 import com.fi.mconceptlayout.base.BaseFragment
 
@@ -13,9 +14,12 @@ created by -fi-
  */
 
 class HomeFragment : BaseFragment(){
+
     override fun getLayoutResource(): Int = R.layout.fragment_home
 
+    override fun getToolbarColor(): Int? = Color.TRANSPARENT
+
     override fun mainCode() {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 }

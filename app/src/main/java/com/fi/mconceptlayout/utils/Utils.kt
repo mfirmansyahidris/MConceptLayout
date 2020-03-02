@@ -10,5 +10,5 @@ created by -fi-
  */
 
 class Utils{
-    val tag = "MConceptLayout"
+    val tag = "__MConceptLayout"
 }

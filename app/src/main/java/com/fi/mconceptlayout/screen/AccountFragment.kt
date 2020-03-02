@@ -15,6 +15,8 @@ created by -fi-
 class AccountFragment : BaseFragment(){
     override fun getLayoutResource(): Int = R.layout.fragment_account
 
+    override fun getToolbarColor(): Int? = null
+
     override fun mainCode() {
         //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
