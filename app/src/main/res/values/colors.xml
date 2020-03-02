@@ -3,4 +3,17 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <!--  color white  -->
+    <color name="colorWhite100">#ffffff</color>
+    <color name="colorWhite90">#e6e6e6</color>
+    <color name="colorWhite80">#cccccc</color>
+    <color name="colorWhite70">#b3b3b3</color>
+    <color name="colorWhite60">#999999</color>
+    <color name="colorWhite50">#808080</color>
+    <color name="colorWhite40">#666666</color>
+    <color name="colorWhite30">#4d4d4d</color>
+    <color name="colorWhite20">#333333</color>
+    <color name="colorWhite10">#1a1a1a</color>
+    <color name="colorWhite0">#000000</color>
 </resources>
