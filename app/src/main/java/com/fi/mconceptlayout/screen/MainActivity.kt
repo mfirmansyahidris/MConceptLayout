@@ -37,7 +37,7 @@ class MainActivity : BaseActivity() {
     private fun openFragment(fragment: Fragment) {
         //supportActionBar?.subtitle = title
         val ft = supportFragmentManager.beginTransaction()
-        ft.replace(R.id.fl_container, fragment)
+        ft.replace(R.id.cl_container, fragment)
         ft.commit()
     }
 

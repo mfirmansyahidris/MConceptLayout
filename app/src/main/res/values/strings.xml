@@ -5,4 +5,11 @@
     <string name="menu_home">Home</string>
     <string name="menu_notification">Notification</string>
     <string name="menu_account">Account</string>
+
+
+    <!--  home fragment  -->
+    <string name="img_banner">Banner Image</string>
+    <string name="label_map">Map</string>
+    <string name="label_save">Saved</string>
+    <string name="label_report">Report</string>
 </resources>

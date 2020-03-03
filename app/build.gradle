@@ -32,6 +32,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
+    //android material theme
     implementation "com.google.android.material:material:1.1.0"
 
     testImplementation 'junit:junit:4.12'

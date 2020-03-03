@@ -6,17 +6,20 @@
     android:fitsSystemWindows="true"
     android:background="@color/colorWhite80">
 
-    <include layout="@layout/toolbar_home" />
+    <include layout="@layout/toolbar_home_header" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
             android:orientation="vertical">
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

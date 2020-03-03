@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:subtitleTextAppearance="@dimen/text_medium"
+        app:subtitleTextColor="@color/colorWhite100">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_homeBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:fitsSystemWindows="true"
+            android:src="@drawable/img_header"
+            app:layout_collapseMode="pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite100"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_normal"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="@dimen/activity_margin_normal"
+            android:textSize="@dimen/text_x_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hi User..." />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/activity_margin_long"
+            android:layout_marginTop="@dimen/activity_margin_short"
+            android:layout_marginEnd="@dimen/activity_margin_long"
+            android:clipToPadding="true"
+            app:cardCornerRadius="@dimen/corner_radius_normal"
+            app:cardElevation="@dimen/activity_elevation_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_toolbar_title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:animateLayoutChanges="true"
+                android:padding="@dimen/activity_margin_normal">
+
+                <TextView
+                    android:id="@+id/tv_bannerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Banner Title" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_banner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_headerBanner"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_bannerTitle" />
+
+                <ImageView
+                    android:id="@+id/iv_headerBanner"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin_normal"
+                    android:contentDescription="@string/img_banner"
+                    android:src="@drawable/ic_reward"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/rv_banner"
+                    app:layout_constraintTop_toBottomOf="@id/tv_bannerTitle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/activity_margin_medium"
+            android:paddingBottom="@dimen/activity_margin_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_banner">
+
+            <LinearLayout style="@style/fab_container">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    style="@style/fab_home_icon"
+                    android:backgroundTint="@color/colorHomeMap"
+                    android:src="@drawable/ic_map" />
+
+                <TextView
+                    style="@style/fab_home_label"
+                    android:text="@string/label_map" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/fab_container">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    style="@style/fab_home_icon"
+                    android:backgroundTint="@color/colorHomeSave"
+                    android:src="@drawable/ic_save" />
+
+                <TextView
+                    style="@style/fab_home_label"
+                    android:text="@string/label_save" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/fab_container">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    style="@style/fab_home_icon"
+                    android:backgroundTint="@color/colorHomeReport"
+                    android:src="@drawable/ic_report" />
+
+                <TextView
+                    style="@style/fab_home_label"
+                    android:text="@string/label_report" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.appbar.AppBarLayout>
+

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#00838f</color>
+    <color name="colorPrimaryDark">#005662</color>
+    <color name="colorAccent">#00838f</color>
 
     <!--  color white  -->
     <color name="colorWhite100">#ffffff</color>
@@ -16,4 +16,17 @@
     <color name="colorWhite20">#333333</color>
     <color name="colorWhite10">#1a1a1a</color>
     <color name="colorWhite0">#000000</color>
+
+
+    <!--Text Color-->
+    <color name="colorTextTitle">#3A3E44</color>
+    <color name="colorTextSubtitle">#8B8B8B</color>
+    <color name="colorTextWhite">#d6d6d6</color>
+    <color name="colorTextAlert">#D50000</color>
+    <color name="colorTextWhiteTransparent90">#E6D6D6D6</color>
+    
+    <!--  home button  -->
+    <color name="colorHomeMap">#7b1fa2</color>
+    <color name="colorHomeSave">#00695c</color>
+    <color name="colorHomeReport">#c62828</color>
 </resources>
