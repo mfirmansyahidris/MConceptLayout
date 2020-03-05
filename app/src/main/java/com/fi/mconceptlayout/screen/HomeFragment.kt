@@ -1,11 +1,8 @@
 package com.fi.mconceptlayout.screen
 
 import android.graphics.Color
-import android.util.Log
 import com.fi.mconceptlayout.R
 import com.fi.mconceptlayout.base.BaseFragment
-import com.fi.mconceptlayout.utils.Utils
-import kotlinx.android.synthetic.main.toolbar_home_header.*
 
 /**
  ****************************************
@@ -16,7 +13,7 @@ created by -fi-
  ****************************************
  */
 
-class HomeFragment : BaseFragment(){
+class HomeFragment : BaseFragment() {
 
     override fun getLayoutResource(): Int = R.layout.fragment_home
 

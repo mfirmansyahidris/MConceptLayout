@@ -16,7 +16,7 @@ created by -fi-
 class NotificationFragment : BaseFragment(){
     override fun getLayoutResource(): Int = R.layout.fragment_notification
 
-    override fun getToolbarColor(): Int? = Color.TRANSPARENT
+    override fun getToolbarColor(): Int? = null
 
     override fun mainCode() {
         //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.

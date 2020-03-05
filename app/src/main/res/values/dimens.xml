@@ -31,5 +31,10 @@
     <!--progressbar-->
     <dimen name="pb_normal">30dp</dimen>
     <dimen name="hpb_normal">6dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!--  appbar  -->
+    <dimen name="app_bar_height">100dp</dimen>
 
 </resources>
