@@ -4,6 +4,7 @@ import android.view.Menu
 import androidx.fragment.app.Fragment
 import com.fi.mconceptlayout.R
 import com.fi.mconceptlayout.base.BaseActivity
+import com.fi.mconceptlayout.screen.homeFragment.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
