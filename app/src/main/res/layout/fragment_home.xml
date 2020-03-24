@@ -7,6 +7,6 @@
 
     <include layout="@layout/toolbar_home" />
 
-    <include layout="@layout/content_scrolling_home" />
+    <include layout="@layout/content_home_scrolling" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

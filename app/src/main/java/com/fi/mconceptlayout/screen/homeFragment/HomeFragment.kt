@@ -8,7 +8,7 @@ import com.fi.mconceptlayout.model.Content2Column
 import com.fi.mconceptlayout.model.MainTask
 import com.fi.mconceptlayout.utils.MarginItemDecoration
 import kotlinx.android.synthetic.main.content_home_header.*
-import kotlinx.android.synthetic.main.content_scrolling_home.*
+import kotlinx.android.synthetic.main.content_home_scrolling.*
 
 /**
  ****************************************
@@ -130,6 +130,9 @@ class HomeFragment : BaseFragment() {
         rv_mainTask.addItemDecoration(MarginItemDecoration(resources.getDimension(R.dimen.activity_margin_normal).toInt(), 2))
 
         rv_mainTask.adapter = homeFragmentMainTaskAdapter
+
+        tv_mainTaskTitle.text = "PJP to do"
+        tv_mainTaskSubtitle.text = "30 March 2020"
 
     }
 }

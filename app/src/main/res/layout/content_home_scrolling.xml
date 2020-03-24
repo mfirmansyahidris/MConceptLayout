@@ -25,17 +25,17 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:elevation="@dimen/activity_elevation_small"
             android:layout_height="wrap_content"
             android:background="@color/colorWhite100"
+            android:elevation="@dimen/activity_elevation_small"
             android:paddingVertical="@dimen/activity_margin_normal">
 
             <TextView
                 android:id="@+id/tv_mainTaskTitle"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/text_large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_large"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -43,21 +43,20 @@
 
             <TextView
                 android:id="@+id/tv_mainTaskSubtitle"
-                android:textColor="@color/colorTextSubtitle"
-                android:textSize="@dimen/text_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorTextSubtitle"
+                android:textSize="@dimen/text_normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_mainTaskTitle"
                 tools:text="Subtitle" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_mainTask"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rv_mainTask"
                 android:overScrollMode="never"
-                android:layout_marginTop="@dimen/activity_margin_normal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_mainTaskSubtitle" />
 
