@@ -3,6 +3,7 @@
     <color name="colorPrimary">#00838f</color>
     <color name="colorPrimaryDark">#005662</color>
     <color name="colorAccent">#00838f</color>
+    <color name="colorAccentLight">#00BFD1</color>
 
     <!--  color white  -->
     <color name="colorWhite100">#ffffff</color>
@@ -38,4 +39,28 @@
     <!--  main task banner color  -->
     <color name="colorTaskBanner_outlet">#00C853</color>
     <color name="colorTaskBanner_mosque">#FFAB00</color>
+
+    <!--  fab / button  -->
+    <color name="colorFab_add">#2962FF</color>
+    <color name="colorButton_main">#2962FF</color>
+
+
+    <!--  color pallet  -->
+    <color name="colorPallet_1">#D50000</color>
+    <color name="colorPallet_2">#C51162</color>
+    <color name="colorPallet_3">#AA00FF</color>
+    <color name="colorPallet_4">#6200EA</color>
+    <color name="colorPallet_5">#304FFE</color>
+    <color name="colorPallet_6">#2962FF</color>
+    <color name="colorPallet_7">#0091EA</color>
+    <color name="colorPallet_8">#00B8D4</color>
+    <color name="colorPallet_9">#00BFA5</color>
+    <color name="colorPallet_10">#00C853</color>
+    <color name="colorPallet_11">#64DD17</color>
+    <color name="colorPallet_12">#AEEA00</color>
+    <color name="colorPallet_13">#FFD600</color>
+    <color name="colorPallet_14">#FFAB00</color>
+    <color name="colorPallet_15">#FF6D00</color>
+    <color name="colorPallet_16">#DD2C00</color>
+
 </resources>

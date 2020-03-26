@@ -18,4 +18,10 @@
     <string name="action_banner">See more</string>
     <string name="label_bottomPage">You have reach the bottom of page</string>
 
+    <!--  main task activity  -->
+    <string name="bt_checkIn">Check In</string>
+    <string name="bt_sendReport">Send Report</string>
+    <string name="bs_mainTask_title">Select Report Type</string>
+    <string name="title_mainTask_report">Reports</string>
+
 </resources>

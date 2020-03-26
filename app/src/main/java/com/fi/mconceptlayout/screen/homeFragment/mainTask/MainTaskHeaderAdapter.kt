@@ -1,4 +1,4 @@
-package com.fi.mconceptlayout.screen.homeFragment
+package com.fi.mconceptlayout.screen.homeFragment.mainTask
 
 import android.view.LayoutInflater
 import android.view.View
@@ -12,12 +12,13 @@ import com.fi.mconceptlayout.R
 created by -fi-
 .::manca.fi@gmail.com ::.
 
-05/03/2020, 06:00 PM
+26/03/2020, 10:43 AM
  ****************************************
  */
 
-class HomeFragmentHeaderAdapter : RecyclerView.Adapter<HomeFragmentHeaderAdapter.ViewHolder>() {
-    var data = listOf<HomeFragment.Content2Column>()
+class MainTaskHeaderAdapter :
+    RecyclerView.Adapter<MainTaskHeaderAdapter.ViewHolder>() {
+    var data = listOf<String>()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -25,8 +26,10 @@ class HomeFragmentHeaderAdapter : RecyclerView.Adapter<HomeFragmentHeaderAdapter
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.item_2_column, parent, false)
-        return ViewHolder(view)
+        val view = layoutInflater.inflate(R.layout.item_1_column, parent, false)
+        return ViewHolder(
+            view
+        )
     }
 
     override fun getItemCount(): Int {
@@ -38,12 +41,10 @@ class HomeFragmentHeaderAdapter : RecyclerView.Adapter<HomeFragmentHeaderAdapter
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val label: TextView = itemView.findViewById(R.id.tv_lable)
-        private val value: TextView = itemView.findViewById(R.id.tv_value)
+        private val tv: TextView = itemView.findViewById(R.id.tv_)
 
-        fun bindItem(items: HomeFragment.Content2Column?) {
-            label.text = items?.label
-            value.text = items?.value
+        fun bindItem(items: String) {
+            tv.text = items
         }
     }
 }

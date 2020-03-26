@@ -16,6 +16,8 @@ class MainActivity : BaseActivity() {
 
     override fun getToolbarTitle(): String = ""
 
+    override fun setToolbarActionButton(): Boolean = false
+
     override fun mainCode() {
         setMenuNavigation()
     }

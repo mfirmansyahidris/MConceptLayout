@@ -1,11 +1,11 @@
 package com.fi.mconceptlayout.screen.homeFragment
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.fi.mconceptlayout.R
 import com.fi.mconceptlayout.base.BaseFragment
-import com.fi.mconceptlayout.model.Content2Column
-import com.fi.mconceptlayout.model.MainTask
+import com.fi.mconceptlayout.screen.homeFragment.mainTask.MainTaskActivity
 import com.fi.mconceptlayout.utils.MarginItemDecoration
 import kotlinx.android.synthetic.main.content_home_header.*
 import kotlinx.android.synthetic.main.content_home_scrolling.*
@@ -27,13 +27,13 @@ class HomeFragment : BaseFragment() {
     override fun getToolbarColor(): Int? = Color.TRANSPARENT
 
     override fun mainCode() {
-        initHeaderLayout()
+        initHeaderUI()
 
-        initMainTaskLayout()
+        initMainTaskUI()
 
     }
 
-    private fun initHeaderLayout(){
+    private fun initHeaderUI(){
         tv_bannerTitle.text = getString(R.string.title_banner)
 
         val content2Columns = listOf(
@@ -47,7 +47,7 @@ class HomeFragment : BaseFragment() {
         rv_banner.adapter = adapter
     }
 
-    private fun initMainTaskLayout(){
+    private fun initMainTaskUI(){
         val listData = listOf(
             MainTask(
                 label = "Outlet",
@@ -123,7 +123,9 @@ class HomeFragment : BaseFragment() {
             )
         )
 
-        homeFragmentMainTaskAdapter = HomeFragmentMainTaskAdapter(activity){}
+        homeFragmentMainTaskAdapter = HomeFragmentMainTaskAdapter(activity){
+            toMainTaskActivity()
+        }
         homeFragmentMainTaskAdapter.data = listData
 
         rv_mainTask.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
@@ -135,4 +137,20 @@ class HomeFragment : BaseFragment() {
         tv_mainTaskSubtitle.text = "30 March 2020"
 
     }
+
+    private fun toMainTaskActivity(){
+        val intent = Intent(activity, MainTaskActivity::class.java)
+        startActivity(intent)
+    }
+
+    data class MainTask(
+        var label: String? = "",
+        var color: String? = "",
+        var title: String? = "",
+        var subtitle: String? = "",
+        var state: String? = "",
+        var distance: String? = ""
+    )
+
+    data class Content2Column(val label: String, val value: String)
 }

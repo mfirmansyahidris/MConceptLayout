@@ -25,8 +25,8 @@ abstract class BaseActivity : AppCompatActivity() {
             toolbar = findViewById(getToolbarResource())
             toolbar?.title = getToolbarTitle()
             setSupportActionBar(toolbar)
-            supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setDefaultDisplayHomeAsUpEnabled(setToolbarActionButton())
+            supportActionBar?.setDisplayHomeAsUpEnabled(setToolbarActionButton())
         }
         mainCode()
     }
@@ -34,5 +34,7 @@ abstract class BaseActivity : AppCompatActivity() {
     protected abstract fun getLayoutResource(): Int
     protected abstract fun getToolbarResource(): Int
     protected abstract fun getToolbarTitle(): String
+    protected abstract fun setToolbarActionButton(): Boolean
     protected abstract fun mainCode()
+
 }

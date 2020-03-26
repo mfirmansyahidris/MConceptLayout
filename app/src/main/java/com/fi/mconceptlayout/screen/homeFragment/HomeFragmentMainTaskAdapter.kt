@@ -5,15 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.fi.mconceptlayout.R
-import com.fi.mconceptlayout.model.MainTask
 
 /**
  ****************************************
@@ -26,10 +23,10 @@ created by -fi-
 
 class HomeFragmentMainTaskAdapter(
     private val context: Context,
-    private val listener: (MainTask) -> Unit
+    private val listener: (HomeFragment.MainTask) -> Unit
 ) :
     RecyclerView.Adapter<HomeFragmentMainTaskAdapter.ViewHolder>() {
-    var data = listOf<MainTask>()
+    var data = listOf<HomeFragment.MainTask>()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -49,7 +46,7 @@ class HomeFragmentMainTaskAdapter(
         holder.bindItem(data[position], listener)
     }
 
-    class ViewHolder(itemView: View, val context: Context) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View, private val context: Context) : RecyclerView.ViewHolder(itemView) {
         private val tvItemTitle: TextView = itemView.findViewById(R.id.tv_itemTitle)
         private val clBanner: ConstraintLayout = itemView.findViewById(R.id.cl_banner)
         private val ivIcon: ImageView = itemView.findViewById(R.id.iv_icon)
@@ -60,7 +57,7 @@ class HomeFragmentMainTaskAdapter(
         private val llcMainTask: LinearLayoutCompat = itemView.findViewById(R.id.llc_mainTask)
 
 
-        fun bindItem(items: MainTask, listener: (MainTask) -> Unit) {
+        fun bindItem(items: HomeFragment.MainTask, listener: (HomeFragment.MainTask) -> Unit) {
             tvItemTitle.text = items.label
             tvTitle.text = items.title
             tvSubtitle.text = items.subtitle
@@ -69,23 +66,48 @@ class HomeFragmentMainTaskAdapter(
 
             when (items.state) {
                 "Not Reported" -> {
-                    tvState.setTextColor(ContextCompat.getColor(context, R.color.colorTextStateNormal))
+                    tvState.setTextColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.colorTextStateNormal
+                        )
+                    )
                 }
                 "Pending" -> {
-                    tvState.setTextColor(ContextCompat.getColor(context, R.color.colorTextStatePending))
+                    tvState.setTextColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.colorTextStatePending
+                        )
+                    )
                 }
                 "Reported" -> {
-                    tvState.setTextColor(ContextCompat.getColor(context, R.color.colorTextStateReported))
+                    tvState.setTextColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.colorTextStateReported
+                        )
+                    )
                 }
             }
 
             when (items.label) {
                 "Outlet" -> {
-                    clBanner.setBackgroundColor(ContextCompat.getColor(context, R.color.colorTaskBanner_outlet))
+                    clBanner.setBackgroundColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.colorTaskBanner_outlet
+                        )
+                    )
                     ivIcon.setImageResource(R.drawable.ic_store)
                 }
                 "Masjid" -> {
-                    clBanner.setBackgroundColor(ContextCompat.getColor(context, R.color.colorTaskBanner_mosque))
+                    clBanner.setBackgroundColor(
+                        ContextCompat.getColor(
+                            context,
+                            R.color.colorTaskBanner_mosque
+                        )
+                    )
                     ivIcon.setImageResource(R.drawable.ic_mosque)
                 }
             }

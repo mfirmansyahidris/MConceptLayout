@@ -35,6 +35,7 @@
     <dimen name="text_margin">16dp</dimen>
 
     <!--  appbar  -->
-    <dimen name="app_bar_height">100dp</dimen>
+    <dimen name="app_bar_height_home">100dp</dimen>
+    <dimen name="app_bar_height_mainTask">180dp</dimen>
 
 </resources>
