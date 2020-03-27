@@ -54,7 +54,7 @@
         android:foreground="?android:selectableItemBackground"
         android:paddingHorizontal="@dimen/activity_margin_normal"
         android:paddingVertical="@dimen/content_margin_normal"
-        android:textColor="@color/colorFab_add"
+        android:textColor="@color/colorAccent"
         android:layout_marginTop="@dimen/content_margin_normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll_header"

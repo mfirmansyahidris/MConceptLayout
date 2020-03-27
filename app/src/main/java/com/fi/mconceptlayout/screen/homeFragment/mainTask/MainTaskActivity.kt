@@ -61,7 +61,7 @@ class MainTaskActivity : BaseActivity() {
             ),
             Report(
                 icon = R.drawable.ic_socialization,
-                name = "Event",
+                name = "Socialozation",
                 description = "Some Description of Event"
             )
         )
@@ -116,7 +116,7 @@ class MainTaskActivity : BaseActivity() {
             ),
             Report(
                 icon = R.drawable.ic_socialization,
-                name = "Event",
+                name = "Socialization",
                 description = "Some Description of Event"
             )
         )

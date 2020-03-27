@@ -44,15 +44,22 @@ class MainTaskReportAdapter(
         holder.bindItem(data[position], listener)
     }
 
-    class ViewHolder(itemView: View, private val context: Context) :
+    inner class ViewHolder(itemView: View, private val context: Context) :
         RecyclerView.ViewHolder(itemView) {
         private val ivIcon: ImageView = itemView.findViewById(R.id.iv_icon)
         private val tvTitle: TextView = itemView.findViewById(R.id.tv_title)
+        private val tvDescription: TextView = itemView.findViewById(R.id.tv_description)
         private val llc: LinearLayoutCompat = itemView.findViewById(R.id.llc_)
+        private val vDivider: View = itemView.findViewById(R.id.v_divider)
 
         fun bindItem(items: MainTaskActivity.Report, listener: (MainTaskActivity.Report) -> Unit) {
             ivIcon.setImageResource(items.icon)
             tvTitle.text = items.name
+            tvDescription.text = items.description
+
+            if(adapterPosition + 1 == data.size){
+                vDivider.visibility = View.GONE
+            }
 
             llc.setOnClickListener { listener(items) }
         }
